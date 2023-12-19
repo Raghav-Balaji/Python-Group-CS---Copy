@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Taxi</title>
+</head>
+<body>
+    <h1>Book a Taxi</h1>
+    <form action="/booking" method="post">
+        <label for="pickup_location">Pickup Location:</label>
+        <input type="text" id="pickup_location" name="pickup_location" list="locations" required>
+        <datalist id="locations">
+            {% for location in locations %}
+                <option value="{{ location }}">
+            {% endfor %}
+        </datalist>
+        <br>
+        <label for="drop_location">Drop Location:</label>
+        <input type="text" id="drop_location" name="drop_location" list="locations" required>
+        <br>
+        <button type="submit">Book Now</button>
+    </form>
+</body>
+</html>

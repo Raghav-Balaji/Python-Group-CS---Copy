@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Local Taxi Booking</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Local Taxi Booking</h1>
+        <form action="/confirmation" method="post">
+            <label for="pickup_location">Pickup Location:</label>
+            <input type="text" id="pickup_location" name="pickup_location" required>
+
+            <label for="dropoff_location">Drop-off Location:</label>
+            <input type="text" id="dropoff_location" name="dropoff_location" required>
+
+            <label for="date_time">Date and Time:</label>
+            <input type="datetime-local" id="date_time" name="date_time" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

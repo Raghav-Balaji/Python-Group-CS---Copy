@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<!-- Website Title -->
+
+<div class="name_of_website">
+    <p class="wesbite-name">Website Name</p>
+</div>
+<!-- Main container that has two box -->
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+
+			<span>or use your phone number for registration</span>
+			<input type="text"  placeholder="User Name" />
+			<input type="text" id="DbPhoneNo" for="dbUsername" placeholder="Phone Number" />
+			<input type="password" id="DbPassword" for="dbPassword" placeholder="Password" />
+			<button id="SignupAccept" type="submit">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form onsubmit="return validateLogin()">
+			<h1>Sign in</h1>
+			
+			<span>or use your account</span>
+			<input type="text" id="PhoneNo" placeholder="Phone Number" />
+			<input type="password" id="Password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button id="Login" type="submit">Login</button>
+		</form>
+<!-- Stuff on the login form  -->
+
+
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p >Enter your personal details and start your journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="errorMessage"></div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>
